@@ -1,6 +1,6 @@
 // var innerHeight = window.innerHeight;
 
 (function(){
-	document.querySelector('.box-left').style.height = window.innerHeight;
+	$('.box-left, .box-center, .box-right').css('height',window.innerHeight+"px"  );
 })();
 
