@@ -1,0 +1,53 @@
+.login-box, .signup-box{
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    margin-top: 150px;
+    border: 1px solid #eee;
+    background-color: #ececec;
+    padding: 50px;
+    border-radius: 3px;
+    box-shadow: 0px 9px 9px -10px #000;
+}
+.form-label{
+	display: block;
+    /* padding: 5px 2px; */
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.form-control {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 4px;
+    padding-left:10px;
+}
+
+.form-control:focus{
+	outline:none;
+	box-shadow: 0 0 2px 0 blue;
+}
+
+.btn{
+	margin-top: 10px;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 1px 0 #000;
+}
+.btn:focus, input:focus{
+	outline:none;
+}
+.btn:hover, .btn:focus{
+	background-color: #ababab;
+}
+.btn:active, .btn:focus{
+    box-shadow: 0 1px 1px 0 #000;
+}
+.or{
+	padding:0 5px;
+}
+
+.required{
+	color:red;
+}
