@@ -1,3 +1,14 @@
+/*html, body, .container, .box-left, .box-right, .box-center{
+    height:100% !important;
+}*/
+body{
+    padding:0;
+    margin:0;
+    width:initial;
+}
+div{
+    box-sizing:border-box;
+}
 .login-box, .signup-box{
     margin-left: auto;
     margin-right: auto;
@@ -51,3 +62,49 @@
 .required{
 	color:red;
 }
+
+
+.box-left{
+    width:20%;
+}
+
+.box-right{
+    width:40%;
+}
+
+.box-center{
+    width:40%;
+}
+
+
+.box-left, .box-center, .box-right{
+    float:left;
+    border:1px solid grey;
+}
+
+.chat-box{
+    padding:10px;
+}
+
+
+
+
+/*   Common Classes     */
+
+.w-100{
+    width:100%;
+}
+
+.w-75{
+    width:75%;
+}
+
+.w-50{
+    width:50%;
+}
+
+.w-25{
+    width:25%;
+}
+
+
