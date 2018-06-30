@@ -55,7 +55,7 @@
 	</div>
 	<script type="text/javascript" src="scripts/app.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function(){		
+	$(document).ready(function(){	
 
 			var validateEmail = function(elementValue) {
 				var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -126,9 +126,18 @@
 							{
 								alert('Signup Successful');
 								$(location).attr('href','login.php');
-							}								
+							}
+							else if(data === "on")
+							{
+								$("#email").removeClass('input-success');
+								$("#email").addClass('input-warning');
+								$("#email").css('color', '#d44141');
+								$("#echeck").html("<p class='echeck'><b>This email already registered..!</b></p>");		
+							}							
 							else
-								alert('Something Went Wrong!');   
+							{
+								alert('Wrong!');   
+							}
 						} 
 					});
 				}
