@@ -30,7 +30,7 @@ class db_operation extends db_connection
 
 		$condition=substr($condition,0,-5);		
 		$sql .="SELECT * FROM ".$table." WHERE  ".$condition." LIMIT 1";		
-		echo $sql;
+		// echo $sql;
 		$query=mysqli_query($this->_con,$sql);
 		$row=mysqli_fetch_array($query);
 		return $row;	

@@ -72,7 +72,7 @@ div{
 }
 
 .box-right{
-    width:40%;
+    width:20%;
 }
 
 .box-center{
@@ -151,6 +151,28 @@ div{
     padding-right:15px;
 }
 
+
+.box-header{
+    padding:10px;
+    border-bottom:1px solid #efefef;
+}
+
+.box-header h3 {
+    margin: 0;
+}
+
+/*.friends-list{
+    padding:10px;
+}*/
+
+.friend-box{
+    padding:10px;
+    border-bottom:1px solid #efefef;
+}
+
+.friend-avatar, .friend-name{
+    float:left;
+}
 
 .clear{
     clear:both;
