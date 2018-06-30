@@ -7,18 +7,20 @@
 <html>
 <head>
 	<title>Chat Page</title>
+	
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+	
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="box-left">
-				
-			</div>
-			<div class="box-center">
-				<div class="chat-box w-100">
-					<div class="msg-trans-box">	
-						<div class="msg-box">
+			<!-- <div class="box-left">				
+			</div> -->
+			<div class="box-center ball">
+				<div class="chat-box ba w-100">
+					<div class="msg-trans-box" >	
+						<div class="msg-box chat-background">
 							
 						<div class="msg">
 							<div class="from">
@@ -94,21 +96,24 @@
 
 						</div>
 					</div>
-					<div class="msg-input">
-						<div class="chat-input" id="msgInput" contenteditable="true"></div><input type="submit" id="msgSend" />
+					<div class="msg-input" style="height:50px">
+						<div class="chat-input" id="msgInput" contenteditable="true"></div>
+						<div class="chat-submit">
+						<button class="btn btn-custom btn-chat" type="button" id="msgSend">Send</button>
+						</div>
+
 					</div>
 
 				</div>
 			</div>
-			<div class="box-right">
+			<!-- <div class="box-right">
 				
-			</div>
+			</div> -->
 			<div class="clear"></div>
 		</div>
 
 	</div>
-	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>
-
+	<script type="text/javascript" src="scripts/jquery-2.1.4.min.js"></script>	
 	<script type="text/javascript" src="scripts/app.js"></script>
 </body>
 </html>
