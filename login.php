@@ -88,8 +88,11 @@
 						url:"login_check.php",
 						data:"uname="+uname+"&pass="+pass,
 						success:function(data){
-							if(data === "1")                      
+							if(data === "1")  
+							{
 								alert("login_successfully");
+								$(location).attr('href','index.php');
+							} 	
 							else
 								alert("Login Error!");
 						} 
