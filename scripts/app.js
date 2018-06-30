@@ -12,6 +12,32 @@
 		$('.msg-trans-box').css('height', $msgBoxHeight);
 	});
 
+	$('#msgSend').on('click', function(e){	
+		e.preventDefault();
+		var msgElem = $("#msgInput");
+		var msgBoxElem = $(".msg-box");
+		var msgVal  = msgElem.html();
+		if( msgVal !== "" ){
+
+			let output;
+
+			output = `
+				<div class="msg">
+					<div class="from">
+						<span>${msgVal}</span>
+					</div>
+					<div class="clear"></div>
+				</div>
+			`; 
+			msgBoxElem.append(output);
+			msgElem.html('').trigger('focus');
+		}
+		$(".msg-box").animate({scrollTop: $(".msg-box")[0].scrollHeight }, 1000);
+	});
+
+	$(".msg-box").animate({scrollTop: $(".msg-box")[0].scrollHeight }, 1000);
+
+
 
 	// setTimeout(function(){
 	// 	$(".msg-box").animate({scrollTop: $(".msg-box")[0].scrollHeight }, 1000);
@@ -24,4 +50,9 @@
 
 
 })();
+
+
+function clearInput(){
+
+}
 

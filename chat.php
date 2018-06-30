@@ -95,7 +95,7 @@
 						</div>
 					</div>
 					<div class="msg-input">
-						<div class="chat-input" contenteditable="true"></div>
+						<div class="chat-input" id="msgInput" contenteditable="true"></div><input type="submit" id="msgSend" />
 					</div>
 
 				</div>
