@@ -17,9 +17,32 @@
 			</div>
 			<div class="box-center">
 				<div class="chat-box w-100">
-					
-					<div class="msg-box">
-						
+					<div class="msg-trans-box">	
+						<div class="msg-box">
+							
+						<div class="msg from">
+							<span class="text">
+								Hi
+							</span>
+						</div>
+
+						<div class="msg">
+							<span class="text">Hi</span>
+						</div>
+
+						<div class="msg from">
+							<span class="text">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+								proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</span>
+						</div>
+
+
+						</div>
 					</div>
 					<div class="msg-input">
 						<div class="chat-input" contenteditable="true"></div>
