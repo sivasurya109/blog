@@ -12,5 +12,16 @@
 		$('.msg-trans-box').css('height', $msgBoxHeight);
 	});
 
+
+	// setTimeout(function(){
+	// 	$(".msg-box").animate({scrollTop: $(".msg-box")[0].scrollHeight }, 1000);
+	// }, 3000);
+
+
+	// $(".msg_container_base").stop().animate({ scrollTop: $(".msg_container_base")[0].scrollHeight}, 1000);
+
+
+
+
 })();
 
