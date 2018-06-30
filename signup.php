@@ -81,7 +81,9 @@
 					$(this).removeClass('input-warning');
 				}
 			});
-			$('#signup').click(function(){
+			$('#signup').click(function(e){
+				e.preventDefault();
+				
 				var email=$("#email").val();				
 				var pass=$("#password").val();  
 				if(email.length!=0 && pass.length!=0)
@@ -91,7 +93,10 @@
 						url:"sign_up.php",
 						data:"email="+email+"&pass="+pass,
 						success:function(data){                           
-							alert("successfull");			                                
+							if( data === "1" )
+								alert('Signup Successful');
+							else
+								alert('Something Went Wrong!');   
 						} 
 					});
 				}

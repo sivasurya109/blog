@@ -11,7 +11,7 @@ class db_operation extends db_connection
 		$sql.="INSERT INTO `$table_name`";
 		$sql.=" (".implode(",", array_keys($fields)).") VALUES ";	
 		$sql.=" ('".implode("','",array_values($fields))."')";
-		echo $sql;
+		// echo $sql;
 		$query=mysqli_query($this->_con,$sql);		
 		if($query)
 		{
@@ -33,9 +33,27 @@ class db_operation extends db_connection
 		echo $sql;
 		$query=mysqli_query($this->_con,$sql);
 		$row=mysqli_fetch_array($query);
-		return $row;
-		
+		return $row;	
 	}
+
+	public function num_rows($table,$where)
+	{
+		$sql="";
+		$condition="";
+		$i=1;
+		foreach($where as $key => $value)
+		{			
+			$condition .= $key."='".$value."' AND ";
+		}
+
+		$condition=substr($condition,0,-5);		
+		$sql .="SELECT count(*) as `num` FROM ".$table." WHERE  ".$condition." LIMIT 1";		
+		// echo $sql;
+		$query=mysqli_query($this->_con,$sql);
+		$row=mysqli_fetch_array($query);
+		return $row['num'];	
+	}
+
 	public function select_all($table)
 	{
 		$sql="SELECT * FROM ".$table;

@@ -18,14 +18,14 @@
 	<div class="container">
 
 		<div class="login-box">
-			<form action="" method="post">
+			<form action="login_check.php" method="post">
 				<div class="form-group">
 					<label class="form-label">Username</label>
-					<input type="text" id="username" name="username" class="form-control" required>
+					<input type="text" id="username" name="uname" class="form-control" required>
 				</div>
 				<div class="form-group">
 					<label class="form-label">Password</label>
-					<input type="password" id="password" name="password" class="form-control" required>
+					<input type="password" id="password" name="pass" class="form-control" required>
 				</div>
 				<div class="btn-group">
 					<button type="submit" id="login" name="login" class="btn btn-custom">Login</button>
@@ -45,9 +45,10 @@
 	$(document).ready(function(){		
 
 			var validateEmail = function(elementValue) {
-				var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+				var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
 				return emailPattern.test(elementValue);
 			}
+
 			$('#username').keyup(function() {
 				var value = $(this).val();
 				var valid = validateEmail(value);
@@ -68,19 +69,29 @@
 				$(this).removeClass('input-warning');
 				}
 			});
-			$('#login').click(function(){
+
+			$('#login').click(function(e){
+
+				e.preventDefault();
+
 				var uname=$("#username").val();
-				alert(uname);
-				var pass=$("#password").val();  
-				if(uname.length!=0 && pass.length!=0)
+				var pass=$("#password").val(); 
+
+				// alert(pass); 
+				// alert(uname); 
+
+				if(uname.length != 0 && pass.length != 0)
 				{
-					alert(pass);                       
+					                      
 					$.ajax({
 						type:"post",
 						url:"login_check.php",
 						data:"uname="+uname+"&pass="+pass,
-						success:function(data){                           
-							alert("login_successfully");			                                
+						success:function(data){
+							if(data === "1")                      
+								alert("login_successfully");
+							else
+								alert("Login Error!");
 						} 
 					});
 				} 				
