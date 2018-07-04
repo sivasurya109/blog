@@ -1,0 +1,199 @@
+/*html, body, .container, .box-left, .box-right, .box-center{
+    height:100% !important;
+}*/
+*{
+    font-family:sans-serif;
+}
+body{
+    padding:0;
+    margin:0;
+    width:initial;
+}
+div{
+    box-sizing:border-box;
+}
+.login-box, .signup-box{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    margin-top: 150px;
+    border: 1px solid #eee;
+    background-color: #ececec;
+    padding: 50px;
+    border-radius: 3px;
+    box-shadow: 0px 9px 9px -10px #000;
+}
+.form-label{
+	display: block;
+    /* padding: 5px 2px; */
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.form-control {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 4px;
+    padding-left:10px;
+}
+
+.form-control:focus{
+	outline:none;
+	box-shadow: 0 0 2px 0 blue;
+}
+
+.btn{
+	margin-top: 10px;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 1px 0 #000;
+}
+.btn:focus, input:focus{
+	outline:none;
+}
+.btn:hover, .btn:focus{
+	background-color: #ababab;
+}
+.btn:active, .btn:focus{
+    box-shadow: 0 1px 1px 0 #000;
+}
+.or{
+	padding:0 5px;
+}
+
+.required{
+	color:red;
+}
+
+
+.box-left{
+    width:20%;
+}
+
+.box-right{
+    width:20%;
+}
+
+.box-center{
+    width:40%;
+}
+
+
+.box-left, .box-center, .box-right{
+    float:left;
+    border:1px solid grey;
+}
+
+.chat-box{
+    position:relative;
+    height:100%;
+}
+.msg-input{
+    /*padding:10px;*/
+    border:1px solid grey;
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+
+.msg-trans-box{
+    width:100%;    
+    position: relative;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+.msg-box{
+    position: absolute;
+    bottom:0;
+    padding:5px;
+    width: 100%;
+    height: 90%;
+    margin-bottom:10px;
+    overflow-y:auto;
+}
+
+.chat-input{
+    width:50%;
+    height:100%;
+    padding:5px;
+    font-size:14px;
+}
+
+.chat-input:focus{
+    outline:0;
+}
+
+.msg{
+    margin:10px;
+}
+
+.from, .to{
+    max-width:75%;
+    display:inline-block;
+    padding:10px;
+    font-size:13px;
+    line-height:20px;
+}
+
+.from{
+    background-color: #3F51B5;
+    float:right;
+    border-radius:20px 5px 5px 20px;
+    padding-left:15px;
+}
+
+.to{
+    background-color: #e4e4e4;
+    border-radius:5px 20px 20px 5px;
+    padding-right:15px;
+}
+
+
+.box-header{
+    padding:10px;
+    border-bottom:1px solid #efefef;
+}
+
+.box-header h3 {
+    margin: 0;
+}
+
+/*.friends-list{
+    padding:10px;
+}*/
+
+.friend-box{
+    padding:10px;
+    border-bottom:1px solid #efefef;
+}
+
+.friend-avatar, .friend-name{
+    float:left;
+}
+
+.clear{
+    clear:both;
+}
+
+
+/*   Common Classes     */
+.w-100{
+    width:100%;
+}
+
+.w-75{
+    width:75%;
+}
+
+.w-50{
+    width:50%;
+}
+
+.w-25{
+    width:25%;
+}
+
+
